@@ -4,8 +4,8 @@
   --black: #111111;
   --white: #fff0f0;
 
-  --font-text: 'Montserrat';
-  --font-title: 'Inter';
+  --font-text: 'Inter';
+  --font-title: 'Montserrat';
 }
 
 *{
@@ -17,4 +17,5 @@
 html{
   font-size: 62.5%;
   font-family: var(--font-text);
+  color: var(--white);
 }

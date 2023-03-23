@@ -1,5 +1,6 @@
 import React from 'react'
 import { InputSearch } from '../InputSearch';
+import './WelcomeView.css'
 
 export const WelcomeView = () => {
   return (
