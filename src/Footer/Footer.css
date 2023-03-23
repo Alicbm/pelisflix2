@@ -1,10 +1,10 @@
 .Footer{
   width: 100%;
-  background-color: var(--white);
+  background-color: var(--black);
   margin-top: 30px;
 }
 .Footer-myself{
-  border-bottom: 1px solid var(--dark-gray);
+  border-bottom: 1px solid var(--red);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -23,23 +23,24 @@
 .Footer-myself__icons div a{
   width: 40px;
   font-size: 4rem;
-  color: var(--black);
+  color: var(--white);
 }
 .Footer-myself__icons div a:hover{
-  color: var(--green);
+  color: var(--red);
 }
 .Footer-myself button{
   width: 120px;
   height: 40px;
   font-size: 1.5rem;
-  background-color: var(--green);
+  background-color: var(--red);
   color: var(--white);
   border: none;
   border-radius: 20px;
   cursor: pointer;
+  margin-top: 10px;
 }
 .Footer-myself button:hover{
-  background-color: #7db83e;
+  background-color: var(--dark-red);
 }
 .Footer-logo{
   display: flex;
@@ -56,6 +57,7 @@
   width: 100%;
   font-size: 1.5rem;
   text-align: center;
+  color: var(--white);
 }
 /* @media(min-width:600px){
   .Footer{
