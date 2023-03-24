@@ -4,11 +4,11 @@
   margin-top: 30px;
 }
 .Footer-myself{
-  border-bottom: 1px solid var(--red);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid var(--red);
   padding: 20px 0;
 }
 .Footer-myself__icons{

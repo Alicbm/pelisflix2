@@ -1,0 +1,11 @@
+.Home{
+  width: 100%;
+  background-color: var(--black);
+}
+.Home-nowplaying{
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url('../images/star-wars.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 10px 0;
+}
