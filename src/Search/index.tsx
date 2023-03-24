@@ -1,11 +1,12 @@
 import React from 'react'
 import { InputSearch } from '../InputSearch'
 import img from '../images/img_test.jpg'
+import './Search.css'
 
 export const Search = () => {
   return (
     <div className='Search'>
-      <div className='Search'>
+      <div className='Search-header'>
         <h1>The place of the best movies!</h1>
         <InputSearch />
       </div>
