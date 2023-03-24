@@ -1,0 +1,20 @@
+.CarouselMovies{
+  width: 95%;
+  margin: 0 auto;
+}
+.CarouselMovies-title{
+  font-size: 2rem;
+  font-family: var(--font-title);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.CarouselMovies-movies{
+  display: flex;
+  overflow-x: scroll;
+}
+.CarouselMovies-movies img{
+  width: 150px;
+  margin-bottom: 20px;
+  margin-right: 2px;
+  border-radius: 2px;
+}
