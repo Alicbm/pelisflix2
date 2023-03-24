@@ -2,6 +2,7 @@ import React from 'react'
 import { CarouselMovies } from '../CarouselMovies'
 import { Categories } from '../Categories'
 import { WelcomeView } from '../WelcomeView'
+import './Home.css'
 
 export const Home = () => {
   return (
