@@ -1,35 +1,38 @@
-import React from 'react'
-import img from '../images/actor.jpg'
+import React from "react";
+import img from "../images/actor.jpg";
+import "./Actors.css";
 
 export const Actors = () => {
   return (
-    <div className='Actors'>
+    <div className="Actors">
       <h2>Top Billed Cast</h2>
-      <div className='Actors-items'>
-        <img src={img} alt="" />
-        <h3>Keanu Reeves</h3>
-        <p>John Wick</p>
-      </div>
-      <div className='Actors-items'>
-        <img src={img} alt="" />
-        <h3>Keanu Reeves</h3>
-        <p>John Wick</p>
-      </div>
-      <div className='Actors-items'>
-        <img src={img} alt="" />
-        <h3>Keanu Reeves</h3>
-        <p>John Wick</p>
-      </div>
-      <div className='Actors-items'>
-        <img src={img} alt="" />
-        <h3>Keanu Reeves</h3>
-        <p>John Wick</p>
-      </div>
-      <div className='Actors-items'>
-        <img src={img} alt="" />
-        <h3>Keanu Reeves</h3>
-        <p>John Wick</p>
+      <div className="Actors-container">
+        <div className="Actors-container__items">
+          <img src={img} alt="" />
+          <h3>Keanu Reeves</h3>
+          <p>John Wick</p>
+        </div>
+        <div className="Actors-container__items">
+          <img src={img} alt="" />
+          <h3>Keanu Reeves</h3>
+          <p>John Wick</p>
+        </div>
+        <div className="Actors-container__items">
+          <img src={img} alt="" />
+          <h3>Keanu Reeves</h3>
+          <p>John Wick</p>
+        </div>
+        <div className="Actors-container__items">
+          <img src={img} alt="" />
+          <h3>Keanu Reeves</h3>
+          <p>John Wick</p>
+        </div>
+        <div className="Actors-container__items">
+          <img src={img} alt="" />
+          <h3>Keanu Reeves</h3>
+          <p>John Wick</p>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};

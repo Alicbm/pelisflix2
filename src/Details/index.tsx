@@ -2,6 +2,7 @@ import React from 'react'
 import { BsFillCalendarCheckFill } from 'react-icons/bs'
 import { BiCameraMovie } from 'react-icons/bi'
 import img from '../images/img_test.jpg'
+import './Details.css'
 
 export const Details = () => {
   return (
@@ -13,14 +14,14 @@ export const Details = () => {
         <h1 className='Details-back__title'>John Wick: Chapter 4</h1>
         <div className='Details-back__items'>
           <div className='Details-back__items-item'>
-            <p>08/12/2003</p>
             <span><BsFillCalendarCheckFill /></span>
+            <p>08/12/2003</p>
           </div>
           <div className='Details-back__items-item'>
-            <p>Suitable for children</p>
             <span><BiCameraMovie /></span>
+            <p>Suitable for children</p>
           </div>
-          <div className='Details-back__items-item'>
+          <div className='Details-back__items-popularity'>
             <p>Popularity</p>
             <span>678.912</span>
           </div>

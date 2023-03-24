@@ -1,0 +1,36 @@
+.Actors{
+  width: 90%;
+  margin: 0 auto;
+}
+.Actors-container{
+  display: flex;
+  overflow-x: scroll;
+}
+.Actors h2{
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.Actors-container__items{
+  min-width: 100px;
+  max-width: 100px;
+  height: 200px;
+  background-color: #1a1a1a;
+  border-radius: 2px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+.Actors-container__items img{
+  width: 100%;
+  margin-bottom: 5px;
+}
+.Actors-container__items h3{
+  font-size: 1.2rem;
+  padding: 0 5px;
+}
+.Actors-container__items p{
+  font-size: 1.1rem;
+  color: var(--red);
+  padding: 0 5px;
+}

@@ -1,0 +1,62 @@
+.Details{
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+}
+.Details-image img{
+  position: absolute;
+  top: 70px;
+  left: 40px;
+  width: 130px;
+  border-radius: 2px;
+}
+.Details-back{
+  width: 100%;
+  height: 220px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('../images/star-wars.jpg');
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 60px;
+}
+.Details-back__title{
+  width: 100%;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.Details-back__items{
+  width: 55%;
+  padding: 5px;
+}
+.Details-back__items-item, .Details-back__items-popularity{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+}
+.Details-back__items-item span, .Details-back__items-popularity span{
+  width: 20%;
+  color: var(--red);
+}
+.Details-back__items-item p{
+  width: 80%;
+}
+.Details-description{
+  width: 85%;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  margin: 0 auto 30px auto;
+}
+.Details-description__category{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 35px 0;
+}
