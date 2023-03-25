@@ -22,6 +22,7 @@ const initialState: Initial = {
     vote_count: 0,
     popularity: 0,
   },
+  categories: []
 }
 
 export const mainSlice = createSlice({
@@ -42,6 +43,9 @@ export const mainSlice = createSlice({
     },
     movieSelected: (state, action: PayloadAction<Trending>) => {
       state.movieSelected = action.payload
+    },
+    categories: (state, action) => {
+      state.categories = action.payload;
     }
   }
 })
@@ -52,6 +56,8 @@ export const {
   topRated,
   popular,
   movieSelected,
+  categories,
+  
 } = mainSlice.actions
 
 export default mainSlice.reducer;

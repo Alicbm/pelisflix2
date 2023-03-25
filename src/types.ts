@@ -4,6 +4,7 @@ export type Initial = {
   topRated: Trending[],
   popular: Trending[],
   movieSelected: Trending,
+  categories: TypeCategories[],
 }
 
 export type Trending = {
@@ -22,3 +23,8 @@ export type Trending = {
   vote_count: number;
   popularity: number;
 };
+
+export type TypeCategories = {
+  id: number,
+  name: string
+}
