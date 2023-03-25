@@ -1,10 +1,27 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Initial, Trending } from "../types";
 
-const initialState = {
+const initialState: Initial = {
   trending: [],
   nowPlaying: [],
   topRated: [],
-  popular: []
+  popular: [],
+  movieSelected: {
+    adult: false,
+    backdrop_path: '',
+    genre_ids: [],
+    id: 0,
+    original_language: '',
+    original_title: '',
+    overview: '',
+    poster_path: '',
+    release_date: '',
+    title: '',
+    video: false,
+    vote_average: 0,
+    vote_count: 0,
+    popularity: 0,
+  },
 }
 
 export const mainSlice = createSlice({
@@ -23,6 +40,9 @@ export const mainSlice = createSlice({
     popular: (state, action) => {
       state.popular = action.payload
     },
+    movieSelected: (state, action: PayloadAction<Trending>) => {
+      state.movieSelected = action.payload
+    }
   }
 })
 
@@ -31,6 +51,7 @@ export const {
   nowPlaying,
   topRated,
   popular,
+  movieSelected,
 } = mainSlice.actions
 
 export default mainSlice.reducer;

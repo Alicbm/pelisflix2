@@ -1,34 +1,37 @@
 import React from 'react'
 import { BsFillCalendarCheckFill } from 'react-icons/bs'
 import { BiCameraMovie } from 'react-icons/bi'
-import img from '../images/img_test.jpg'
+import { useAppSelector } from '../store/hooks'
 import './Details.css'
 
 export const Details = () => {
+  const { movieSelected } = useAppSelector(state => state.mainReducer)
+  const url_image = process.env.REACT_APP_URL_IMAGE;
+
   return (
     <div className='Details'>
       <div className='Details-image'>
-        <img src={img} alt="" />
+        <img src={`${url_image}${movieSelected.poster_path}`} alt="" />
       </div>
       <div className='Details-back'>
-        <h1 className='Details-back__title'>John Wick: Chapter 4</h1>
+        <h1 className='Details-back__title'>{movieSelected.title}</h1>
         <div className='Details-back__items'>
           <div className='Details-back__items-item'>
             <span><BsFillCalendarCheckFill /></span>
-            <p>08/12/2003</p>
+            <p>{movieSelected.release_date}</p>
           </div>
           <div className='Details-back__items-item'>
             <span><BiCameraMovie /></span>
-            <p>Suitable for children</p>
+            <p>{movieSelected.adult ? 'Suitable for children' : 'Not suitable for children'}</p>
           </div>
           <div className='Details-back__items-popularity'>
             <p>Popularity</p>
-            <span>678.912</span>
+            <span>{movieSelected.popularity}</span>
           </div>
         </div>
       </div>
       <div className='Details-description'>
-        <p>With the price on his head ever increasing, John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.</p>
+        <p>{movieSelected.overview}</p>
         <ul className='Details-description__category'>
           <li>Comedy</li>
           <li>Comedy</li>

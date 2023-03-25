@@ -1,3 +1,11 @@
+export type Initial = {
+  trending: Trending[],
+  nowPlaying: Trending[],
+  topRated: Trending[],
+  popular: Trending[],
+  movieSelected: Trending,
+}
+
 export type Trending = {
   adult: boolean;
   backdrop_path: string;
