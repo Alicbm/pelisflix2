@@ -8,9 +8,9 @@ export const Description = () => {
   return (
     <div className='Description'>
       <Details />
-      <Actors />
+      <Actors />  
       <Video />
-      <CarouselMovies title='Similar Movies'/>
+      {/* <CarouselMovies title='Similar Movies'/> */}
     </div>
   )
 }
