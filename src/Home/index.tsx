@@ -2,12 +2,18 @@ import React from 'react'
 import { CarouselMovies } from '../CarouselMovies'
 import { Categories } from '../Categories'
 import { WelcomeView } from '../WelcomeView'
-import { trending as setTrending, nowPlaying as setNowPlaying, topRated as setTopRated, popular as setPopular, categories as setCategories } from '../features/mainSlices'
+import {
+  trending as setTrending,
+  nowPlaying as setNowPlaying,
+  topRated as setTopRated,
+  popular as setPopular,
+  categories as setCategories,
+} from "../features/mainSlices";
 import { useAppDispatch, useAppSelector } from '../store/hooks'
 import './Home.css'
 
 export const Home = () => {
-  const { trending, nowPlaying, topRated, popular, categories } = useAppSelector(state => state.mainReducer)
+  const { trending, nowPlaying, topRated, popular } = useAppSelector(state => state.mainReducer)
   const dispatch = useAppDispatch()
 
   React.useEffect(() => {

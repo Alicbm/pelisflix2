@@ -22,7 +22,21 @@ const initialState: Initial = {
     vote_count: 0,
     popularity: 0,
   },
-  categories: []
+  categories: [],
+  actors: [],
+  similarMovies: [],
+  video: {
+    iso_639_1: '',
+    iso_3166_1: '',
+    name: '',
+    key: '',
+    site: '',
+    size: 0,
+    type: '',
+    official: false,
+    published_at: '',
+    id: '',
+  },
 }
 
 export const mainSlice = createSlice({
@@ -46,7 +60,16 @@ export const mainSlice = createSlice({
     },
     categories: (state, action) => {
       state.categories = action.payload;
-    }
+    },
+    actors: (state, action) => {
+      state.actors = action.payload;
+    },
+    similarMovies: (state, action) => {
+      state.similarMovies = action.payload;
+    },
+    video: (state, action) => {
+      state.video = action.payload;
+    },
   }
 })
 
@@ -57,7 +80,9 @@ export const {
   popular,
   movieSelected,
   categories,
-  
+  actors,
+  similarMovies,
+  video,
 } = mainSlice.actions
 
 export default mainSlice.reducer;

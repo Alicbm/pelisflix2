@@ -12,7 +12,7 @@ export const Categories = () => {
       <ul className='Categories-list'>
         {
           categories.map((category: TypeCategories) => (
-            <li>{category.name}</li>
+            <li key={category.id}>{category.name}</li>
           ))
         }
       </ul>

@@ -20,4 +20,9 @@
   width: 100%;
   height: 200px;
   background-color: #1a1a1a;
+  padding: 5px;
+}
+.Video-movie iframe{
+  width: 100%;
+  height: 100%;
 }
