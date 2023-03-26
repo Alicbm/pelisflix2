@@ -1,32 +1,70 @@
 import React from 'react'
+import { InputSearch } from '../InputSearch'
+import { categorySelected as setCategorySelected, movieSelected as setMoviSelected } from '../features/mainSlices'
 import { useAppDispatch, useAppSelector } from '../store/hooks'
-import { categoryId as setCategoryId } from '../features/mainSlices'
-import { TypeCategories } from '../types'
+import { Trending, TypeCategories } from '../types'
 import { useNavigate } from 'react-router-dom'
 import './Categories.css'
 
 export const Categories = () => {
-  const { categories } = useAppSelector(state => state.mainReducer)
+  const { categories, categoryId, categorySelected } = useAppSelector(state => state.mainReducer)
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
 
+  const url_img = process.env.REACT_APP_URL_IMAGE;
+
+  const nameCategory = categories.find((category: TypeCategories) => (
+    category.id === categoryId
+  ))  
+
+  React.useEffect(() => {
+    const getPosts = async () => { 
+      const mainUrl = process.env.REACT_APP_MAIN_URL  
+      const key = process.env.REACT_APP_KEY  
+      const allMovies: Trending[] = []  
+
+      try {
+        for (let i = 1; i <= 2; i++) {
+          const similarMoviesFetch = await fetch(`${mainUrl}/discover/movie?api_key=${key}&page=${i}&with_genres=${categoryId}`);
+          const dataSimilarMovies = await similarMoviesFetch.json();
+          
+          allMovies.push(...dataSimilarMovies.results)
+        }
+        dispatch(setCategorySelected(allMovies));    
+            
+
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getPosts()
+  }, [categories])
+
   return (
     <div className='Categories'>
-      <h2 className='Categories-title'>Categories</h2>
-      <ul className='Categories-list'>
-        {
-          categories.map((category: TypeCategories) => (
-            <li 
-              onClick={() => { 
-                dispatch(setCategoryId(category.id))
-                navigate('/search')
-              }}
-              key={category.id}>
-              {category.name}
-            </li>
-          ))
-        }
-      </ul>
+      <div className='Categories-header'>
+        <h1>The place of the best movies!</h1>
+        <InputSearch />
+      </div>
+      <div className='Categories-container'>
+        <div className='Categories-container__title'>
+          {nameCategory?.name}
+        </div>
+        <div className='Categories-container__movies'>
+          {
+            categorySelected.map((movie: Trending) => (
+              <img 
+                onClick={() =>{
+                  dispatch(setMoviSelected(movie))
+                  navigate('/description')
+                }}
+                src={`${url_img}${movie.poster_path}`} 
+                alt={movie.title} 
+                key={movie.id}/>
+            ))
+          }
+        </div>
+      </div>
     </div>
   )
 }

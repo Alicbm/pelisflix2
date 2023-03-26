@@ -1,6 +1,6 @@
 import React from 'react'
 import { CarouselMovies } from '../CarouselMovies'
-import { Categories } from '../Categories'
+import { ListCategories } from '../ListCategories'
 import { WelcomeView } from '../WelcomeView'
 import {
   trending as setTrending,
@@ -56,7 +56,7 @@ export const Home = () => {
         <CarouselMovies title='Now Playing' movies={nowPlaying}/>
       </div>
       <CarouselMovies title='Top Rated' movies={topRated}/>
-      <Categories />
+      <ListCategories />
     </div>
   )
 }
