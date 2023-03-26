@@ -8,6 +8,8 @@ export type Initial = {
   actors: TypeActors[]
   similarMovies: Trending[],
   video: TypeVideo,
+  categorySelected: Trending[],
+  categoryId: number,
 }
 
 export type Trending = {

@@ -37,6 +37,8 @@ const initialState: Initial = {
     published_at: '',
     id: '',
   },
+  categorySelected: [],
+  categoryId: 0,
 }
 
 export const mainSlice = createSlice({
@@ -70,6 +72,12 @@ export const mainSlice = createSlice({
     video: (state, action) => {
       state.video = action.payload;
     },
+    categorySelected: (state, action) => {
+      state.categorySelected = action.payload
+    },
+    categoryId: (state, action) => {
+      state.categoryId = action.payload
+    },
   }
 })
 
@@ -83,6 +91,8 @@ export const {
   actors,
   similarMovies,
   video,
+  categorySelected,
+  categoryId
 } = mainSlice.actions
 
 export default mainSlice.reducer;

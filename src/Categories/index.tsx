@@ -1,10 +1,14 @@
 import React from 'react'
-import { useAppSelector } from '../store/hooks'
+import { useAppDispatch, useAppSelector } from '../store/hooks'
+import { categoryId as setCategoryId } from '../features/mainSlices'
 import { TypeCategories } from '../types'
+import { useNavigate } from 'react-router-dom'
 import './Categories.css'
 
 export const Categories = () => {
   const { categories } = useAppSelector(state => state.mainReducer)
+  const dispatch = useAppDispatch()
+  const navigate = useNavigate()
 
   return (
     <div className='Categories'>
@@ -12,7 +16,14 @@ export const Categories = () => {
       <ul className='Categories-list'>
         {
           categories.map((category: TypeCategories) => (
-            <li key={category.id}>{category.name}</li>
+            <li 
+              onClick={() => { 
+                dispatch(setCategoryId(category.id))
+                navigate('/search')
+              }}
+              key={category.id}>
+              {category.name}
+            </li>
           ))
         }
       </ul>
