@@ -9,7 +9,9 @@ export type Initial = {
   similarMovies: Trending[],
   video: TypeVideo,
   categorySelected: Trending[],
+  section: Trending[],
   categoryId: number,
+  nameSection: string,
 }
 
 export type Trending = {

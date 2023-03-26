@@ -5,6 +5,7 @@ import { Header } from './Header';
 import { Footer } from './Footer';
 import { Categories } from './Categories';
 import { Description } from './Description';
+import { Section } from './Sections';
 import './App.css';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/categories' element={<Categories />}/>
+        <Route path='/sections' element={<Section />}/>
         <Route path='/description' element={<Description />}/>
       </Routes>
       <Footer />

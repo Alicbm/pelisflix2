@@ -26,7 +26,7 @@ export const Actors = () => {
       }
     }
     getPosts()
-  }, [])
+  }, [movieSelected])
 
   return (
     <div className="Actors">
