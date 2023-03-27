@@ -1,6 +1,7 @@
 .InputSearch{
   position: relative;
   width: 90%;
+  max-width: 1040px;
   margin: 0 auto;
 }
 .InputSearch-input{

@@ -22,3 +22,7 @@ html{
   color: var(--white);
   background-color: var(--black);
 }
+#root{
+  max-width: 1300px;
+  margin: 0 auto;
+}
