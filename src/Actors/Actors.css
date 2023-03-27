@@ -18,11 +18,15 @@
   height: 200px;
   background-color: #1a1a1a;
   border-radius: 2px;
+  padding-bottom: 5px;
+  overflow: hidden;
   margin-right: 5px;
   margin-bottom: 10px;
 }
 .Actors-container__items img{
   width: 100%;
+  min-height: 150px;
+  object-fit: cover;
   margin-bottom: 5px;
 }
 .Actors-container__items h3{

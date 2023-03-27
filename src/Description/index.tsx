@@ -1,10 +1,11 @@
 import React from 'react'
+import { useAppDispatch, useAppSelector } from '../store/hooks'
+import { similarMovies as setSimilarMovies, video as setVideo } from '../features/mainSlices'
 import { Actors } from '../Actors'
 import { CarouselMovies } from '../CarouselMovies'
 import { Details } from '../Details'
-import { useAppDispatch, useAppSelector } from '../store/hooks'
-import { similarMovies as setSimilarMovies, video as setVideo } from '../features/mainSlices'
 import { Video } from '../Video'
+import { Reviews } from '../Reviews'
 
 export const Description = () => {
   const { movieSelected, similarMovies } = useAppSelector(state => state.mainReducer)
@@ -38,6 +39,7 @@ export const Description = () => {
       <Actors />  
       <Video />
       <CarouselMovies title='Similar Movies' movies={similarMovies}/>
+      <Reviews />
     </div>
   )
 }

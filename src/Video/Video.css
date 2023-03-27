@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1a1a1a;
+  background-color: var(--light-blac);
   padding: 0 15px;
   margin-bottom: 5px;
 }
@@ -19,7 +19,7 @@
 .Video-movie{
   width: 100%;
   height: 200px;
-  background-color: #1a1a1a;
+  background-color: var(--light-blac);
   padding: 5px;
 }
 .Video-movie iframe{

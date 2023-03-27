@@ -2,6 +2,7 @@ import React from "react";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { actors as setActors } from "../features/mainSlices";
 import { TypeActors } from "../types";
+import unknown from '../images/unknown.jpg'
 import "./Actors.css";
 
 export const Actors = () => {
@@ -34,8 +35,15 @@ export const Actors = () => {
       <div className="Actors-container">
         {actors.map((actor: TypeActors) => (
           <div className="Actors-container__items" key={actor.id}>
-            <img src={`${process.env.REACT_APP_URL_IMAGE}/${actor.profile_path}`} alt={actor.name} />
-            <h3>{actor.name}</h3>
+            <img 
+              src={
+                actor.profile_path ?
+                `${process.env.REACT_APP_URL_IMAGE}/${actor.profile_path}`
+                : unknown
+              } 
+              alt={actor.name} 
+            />
+            <h3>{actor.name.split(" ").splice(0, 2).join(" ")}</h3>
             <p>{actor.character}</p>
           </div>
         ))}

@@ -12,6 +12,7 @@ export type Initial = {
   section: Trending[],
   categoryId: number,
   nameSection: string,
+  reviews: Review[],
 }
 
 export type Trending = {
@@ -62,4 +63,19 @@ export type TypeVideo = {
   official: boolean;
   published_at: string,
   id: string,
+};
+
+export type Review = {
+  author: string;
+  author_details: {
+    name: string,
+    username: string,
+    avatar_path: string,
+    rating: any;
+  };
+  content: string,
+  created_at: string,
+  id: string,
+  updated_at: string,
+  url: string,
 };

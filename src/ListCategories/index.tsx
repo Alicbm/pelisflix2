@@ -19,7 +19,7 @@ export const ListCategories = () => {
             <li 
               onClick={() => { 
                 dispatch(setCategoryId(category.id))
-                navigate('/search')
+                navigate('/categories')
               }}
               key={category.id}>
               {category.name}

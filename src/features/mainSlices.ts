@@ -41,6 +41,7 @@ const initialState: Initial = {
   section: [],
   categoryId: 0,
   nameSection: '',
+  reviews: [],
 }
 
 export const mainSlice = createSlice({
@@ -86,6 +87,9 @@ export const mainSlice = createSlice({
     nameSection: (state, action) => {
       state.nameSection = action.payload
     },
+    reviews: (state, action) => {
+      state.reviews = action.payload
+    },
   }
 })
 
@@ -103,6 +107,7 @@ export const {
   categoryId,
   nameSection,
   section,
+  reviews,
 } = mainSlice.actions
 
 export default mainSlice.reducer;
