@@ -31,5 +31,9 @@
   }
   .CarouselMovies-movies img{
     width: 170px;
+    cursor: pointer;
+  }
+  .CarouselMovies-movies img:hover{
+    opacity: 0.9;
   }
 }

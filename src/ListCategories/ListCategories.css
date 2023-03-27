@@ -27,3 +27,13 @@
   text-align: center;
   border-radius: 2px;  
 }
+
+@media(min-width: 760px){
+  .ListCategories-list li{
+    width: 16%;
+    cursor: pointer;
+  }
+  .ListCategories-list li:hover{
+    color: var(--white);
+  }
+}
