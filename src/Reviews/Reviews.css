@@ -1,16 +1,16 @@
 .Reviews{
   width: 100%;
+  margin-top: 30px
 }
 .Reviews-container{
   width: 90%;
   background-color: var(--light-black);
   border-radius: 2px;
   padding: 20px;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 .Reviews-container__user{
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 20px;
 }

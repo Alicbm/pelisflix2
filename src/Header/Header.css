@@ -45,3 +45,19 @@
   font-size: 25px;
   color: var(--dark-red);
 }
+@media(min-width: 760px){
+  .Header-menu{
+    display: none;
+  }
+  .Header-categories{
+    position: static;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    transform: translateY(0%);
+  }
+  .Header-categories li{
+    border: none;
+  }
+}
