@@ -19,3 +19,17 @@
   margin-right: 2px;
   border-radius: 2px;
 }
+@media(min-width: 760px){
+  .CarouselMovies-movies::-webkit-scrollbar{
+    height: 5px;
+    background-color: rgba(75, 75, 75, 0.2);
+    border-radius: 8px;
+  }
+  .CarouselMovies-movies::-webkit-scrollbar-thumb{
+    background-color: #2b2b2b;
+    border-radius: 8px;
+  }
+  .CarouselMovies-movies img{
+    width: 170px;
+  }
+}
