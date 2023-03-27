@@ -6,6 +6,7 @@ import { CarouselMovies } from '../CarouselMovies'
 import { Details } from '../Details'
 import { Video } from '../Video'
 import { Reviews } from '../Reviews'
+import './Description.css'
 
 export const Description = () => {
   const { movieSelected, similarMovies } = useAppSelector(state => state.mainReducer)

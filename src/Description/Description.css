@@ -1,0 +1,5 @@
+@media(min-width: 700px){
+  .Description .CarouselMovies{
+    max-width: 90%; 
+  }
+}

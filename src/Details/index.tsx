@@ -1,4 +1,6 @@
 import React from 'react'
+import { BsFillCalendarCheckFill } from 'react-icons/bs'
+import { BiCameraMovie } from 'react-icons/bi'
 import { useAppSelector } from '../store/hooks'
 import { TypeCategories } from '../types'
 import './Details.css'
@@ -18,7 +20,7 @@ export const Details = () => {
   };
 
   const styleBack = {
-    background: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(https://image.tmdb.org/t/p/original${movieSelected.backdrop_path})`,
+    background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)), url(https://image.tmdb.org/t/p/original${movieSelected.backdrop_path})`,
     backgroundPosition: "center",
     backgroundSize: "cover"
   }
@@ -41,13 +43,15 @@ export const Details = () => {
           <img src={`${url_image}${movieSelected.poster_path}`} alt="" />
           <div className='Details-back__items-item'>
             <p>{formatDate(movieSelected.release_date)}</p>
+            <span><BsFillCalendarCheckFill /></span>
           </div>
           <div className='Details-back__items-item'>
             <p>{
               movieSelected.adult === false ? 
-              <span>Suitable for children</span> 
-              : <span>Not suitable for children</span>
+              <>Suitable for children</> 
+              : <>Not suitable for children</>
               }</p>
+              <span><BiCameraMovie /></span>
           </div>
           <div className='Details-back__items-popularity'>
             <p>Popularity</p>

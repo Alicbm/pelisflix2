@@ -47,3 +47,25 @@
   font-size: 1.2rem;
   color: var(--red);
 }
+@media(min-width: 700px){
+  .Reviews{
+    margin-bottom: 30px;
+  }
+  .Reviews-container{
+    padding: 30px;
+  }
+  .Reviews-container__user-user h2{
+    font-size: 2rem;
+  }
+  .Reviews-container__user-user p{
+    font-size: 1.4rem;
+  }
+  .Reviews-container__comment p{
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    padding-left: 110px;
+  }
+  .Reviews-container__comment p a{
+    font-size: 1.4rem;
+  }
+}

@@ -38,3 +38,25 @@
   color: var(--red);
   padding: 0 5px;
 }
+
+@media(min-width: 700px){
+  .Actors{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px auto;
+  }
+  .Actors h2{
+    width: 30%;
+    max-width: 120px;
+  }
+  .Actors-container::-webkit-scrollbar{
+    height: 5px;
+    background-color: rgba(75, 75, 75, 0.2);
+    border-radius: 8px;
+  }
+  .Actors-container::-webkit-scrollbar-thumb{
+    background-color: #2b2b2b;
+    border-radius: 8px;
+  }
+}
