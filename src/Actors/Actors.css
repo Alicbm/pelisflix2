@@ -15,7 +15,7 @@
 .Actors-container__items{
   min-width: 100px;
   max-width: 100px;
-  height: 200px;
+  height: 210px;
   background-color: #1a1a1a;
   border-radius: 2px;
   padding-bottom: 5px;
@@ -31,7 +31,7 @@
 }
 .Actors-container__items h3{
   font-size: 1.2rem;
-  padding: 0 5px;
+  padding: 0 5px 5px 5px;
 }
 .Actors-container__items p{
   font-size: 1.1rem;

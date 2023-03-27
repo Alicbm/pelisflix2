@@ -1,6 +1,6 @@
 .ListCategories{
   width: 95%;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 .ListCategories-title{
   font-size: 2rem;
@@ -20,14 +20,10 @@
   color: var(--gray);
 }
 .ListCategories-list li{
-  min-width: 100px;
+  width: 100px;
   min-height: 40px;
   display: grid;
   place-content: center;
-  color: var(--black);
-  background-color: var(--red);
   text-align: center;
-  border-radius: 2px;
-  margin-bottom: 5px;
-  
+  border-radius: 2px;  
 }
