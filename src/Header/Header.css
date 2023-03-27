@@ -67,5 +67,9 @@
   }
   .Header-categories li{
     border: none;
+    cursor: pointer;
+  }
+  .Header-categories li:hover{
+    color: var(--dark-red);
   }
 }

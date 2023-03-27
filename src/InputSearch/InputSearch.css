@@ -16,6 +16,9 @@
   outline: none;
   padding: 0 20px;
 }
+.InputSearch-input:hover{
+  border: 1px solid var(--dark-red);
+}
 .InputSearch-button{
   position: absolute;
   top: 0;
@@ -29,6 +32,9 @@
   border: none;
   border-radius: 30px;
   cursor: pointer;
+}
+.InputSearch-button:hover{
+  background: var(--red);
 }
 .InputSearch-input:focus-visible{
   border: 1px solid var(--dark-red);
