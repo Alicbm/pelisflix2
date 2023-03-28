@@ -14,6 +14,8 @@ import { getSections, getCategoriesGenres } from '../functions';
 import './Home.css'
 
 export const Home = () => {
+  window.scrollTo(0, 0);
+
   const { trending, nowPlaying, topRated, popular } = useAppSelector(state => state.mainReducer)
   const dispatch = useAppDispatch()
   const mainUrl = process.env.REACT_APP_MAIN_URL  

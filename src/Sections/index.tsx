@@ -9,6 +9,8 @@ import logo from '../images/pelisflix_logo.png'
 import './Section.css'
 
 export const Section = () => {
+  window.scrollTo(0, 0);
+
   const { section, nameSection } = useAppSelector(state => state.mainReducer)
   const dispatch = useAppDispatch()
   const navigate = useNavigate()

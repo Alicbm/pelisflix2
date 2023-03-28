@@ -9,6 +9,8 @@ import { Reviews } from '../Reviews'
 import './Description.css'
 
 export const Description = () => {
+  window.scrollTo(0, 0);
+
   const { movieSelected, similarMovies } = useAppSelector(state => state.mainReducer)
   const dispatch = useAppDispatch()
 

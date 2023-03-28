@@ -11,6 +11,8 @@ import logo from '../images/pelisflix_logo.png'
 import "./Categories.css";
 
 export const Categories = () => {
+  window.scrollTo(0, 0);
+
   const { categories, categoryId, categorySelected } = useAppSelector(
     (state) => state.mainReducer
   );
