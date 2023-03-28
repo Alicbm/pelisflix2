@@ -5,6 +5,7 @@ import { useAppDispatch, useAppSelector } from '../store/hooks'
 import { Trending } from '../types'
 import { useNavigate } from 'react-router-dom'
 import unknown from '../images/incognito.jpg'
+import logo from '../images/pelisflix_logo.png'
 import './Section.css'
 
 export const Section = () => {
@@ -17,7 +18,7 @@ export const Section = () => {
   return (
     <div className='Section'>
       <div className='Section-header'>
-        <h1>The place of the best movies!</h1>
+        <img src={logo} alt="Pelisflix" />
         <InputSearch />
       </div>
       <div className='Section-container'>

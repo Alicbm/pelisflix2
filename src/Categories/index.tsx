@@ -7,6 +7,7 @@ import {
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { Trending, TypeCategories } from "../types";
 import { useNavigate } from "react-router-dom";
+import logo from '../images/pelisflix_logo.png'
 import "./Categories.css";
 
 export const Categories = () => {
@@ -53,7 +54,7 @@ export const Categories = () => {
   return (
     <div className="Categories">
       <div className="Categories-header">
-        <h1>The place of the best movies!</h1>
+        <img src={logo} alt="Pelisflix" />
         <InputSearch />
       </div>
       <div className="Categories-container">
