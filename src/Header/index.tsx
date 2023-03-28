@@ -9,7 +9,6 @@ import './Header.css'
 
 export const Header = () => {
   const [modal, setModal] = React.useState<boolean>(false)
-  const { nameSection } = useAppSelector(state => state.mainReducer)
 
   const dispatch = useAppDispatch()
   const navigate = useNavigate()
@@ -24,17 +23,17 @@ export const Header = () => {
         const res = await fetch(
           `${mainUrl}/movie/${option}?api_key=${key}&page=${i}`
         );
-        const data = await res.json();
 
+        const data = await res.json();
         allMovies.push(...data.results);
       }
 
       dispatch(setSection(allMovies));
       dispatch(setNameSection(name));
+      
       navigate("/sections");
       setModal(false);
 
-      console.log(nameSection);
     } catch (error) {
       console.log(error);
     }
