@@ -1,28 +1,21 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { Initial, Trending } from "../types";
+import { storage } from "../functions";
+import { Initial, Trending, TypeCategories } from "../types";
+
+const dataSection: Trending[] = storage('PELISFLIX2_SECTION')
+const dataSectionName: string = storage('PELISFLIX2_SECTION_NAME')
+const dataCategorySelected: Trending[] = storage('PELISFLIX2_CATEGORY_SELECTED')
+const dataCategory: TypeCategories[] = storage('PELISFLIX2_CATEGORY')
+const dataCategoryId: number = storage('PELISFLIX2_CATEGORY_ID')
+const dataMovieSelected: Trending = storage('PELISFLIX2_MOVIE_SELECTED')
 
 const initialState: Initial = {
   trending: [],
   nowPlaying: [],
   topRated: [],
   popular: [],
-  movieSelected: {
-    adult: false,
-    backdrop_path: '',
-    genre_ids: [],
-    id: 0,
-    original_language: '',
-    original_title: '',
-    overview: '',
-    poster_path: '',
-    release_date: '',
-    title: '',
-    video: false,
-    vote_average: 0,
-    vote_count: 0,
-    popularity: 0,
-  },
-  categories: [],
+  movieSelected: dataMovieSelected,
+  categories: dataCategory,
   actors: [],
   similarMovies: [],
   video: {
@@ -37,10 +30,10 @@ const initialState: Initial = {
     published_at: '',
     id: '',
   },
-  categorySelected: [],
-  section: [],
-  categoryId: 0,
-  nameSection: '',
+  categorySelected: dataCategorySelected,
+  section: dataSection,
+  categoryId: dataCategoryId,
+  nameSection: dataSectionName,
   reviews: [],
 }
 

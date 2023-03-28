@@ -30,7 +30,23 @@ export const getCategoriesGenres = async (
     const data = await res.json();
 
     dispatch(callback(data.genres));
+    localStorage.setItem('PELISFLIX2_CATEGORY', JSON.stringify(data.genres));
+
   } catch (error) {
     console.log(error);
   }
 };
+
+export const storage = (storage: string) => {
+  const localStorageMovie = localStorage.getItem(storage);
+  let data;
+
+  if (!localStorageMovie) {
+    localStorage.setItem(storage, JSON.stringify([]));
+    data = [];
+  } else {
+    data = JSON.parse(localStorageMovie);
+  }
+
+  return data;
+}

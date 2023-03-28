@@ -31,6 +31,9 @@ export const Header = () => {
       dispatch(setSection(allMovies));
       dispatch(setNameSection(name));
       
+      localStorage.setItem('PELISFLIX2_SECTION', JSON.stringify(allMovies));
+      localStorage.setItem('PELISFLIX2_SECTION_NAME', JSON.stringify(name));
+
       navigate("/sections");
       setModal(false);
 

@@ -20,6 +20,8 @@ export const ListCategories = () => {
               onClick={() => { 
                 dispatch(setCategoryId(category.id))
                 navigate('/categories')
+
+                localStorage.setItem('PELISFLIX2_CATEGORY_ID', JSON.stringify(category.id));
               }}
               key={category.id}>
               {category.name}

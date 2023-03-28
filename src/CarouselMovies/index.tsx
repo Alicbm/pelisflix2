@@ -13,6 +13,8 @@ export const CarouselMovies = (prop: { title: string; movies: Trending[] }) => {
   const handleMovieSelected = (movie: Trending) => {
     dispatch(setMoviSelected(movie))
     navigate('/description')
+
+    localStorage.setItem('PELISFLIX2_MOVIE_SELECTED', JSON.stringify(movie));
   }
 
   return (

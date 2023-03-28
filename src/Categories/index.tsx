@@ -37,7 +37,12 @@ export const Categories = () => {
 
           allMovies.push(...dataSimilarMovies.results);
         }
-        dispatch(setCategorySelected(allMovies));
+
+        if(allMovies.length > 0){
+          dispatch(setCategorySelected(allMovies));
+          localStorage.setItem('PELISFLIX2_CATEGORY_SELECTED', JSON.stringify(allMovies));
+        }
+
       } catch (error) {
         console.log(error);
       }
