@@ -4,6 +4,7 @@ import { movieSelected as setMoviSelected } from '../features/mainSlices'
 import { useAppDispatch, useAppSelector } from '../store/hooks'
 import { Trending } from '../types'
 import { useNavigate } from 'react-router-dom'
+import unknown from '../images/incognito.jpg'
 import './Section.css'
 
 export const Section = () => {
@@ -31,7 +32,11 @@ export const Section = () => {
                   dispatch(setMoviSelected(movie))
                   navigate('/description')
                 }}
-                src={`${url_img}${movie.poster_path}`} 
+                src={
+                  movie.poster_path ?
+                  `${url_img}${movie.poster_path}`
+                  : unknown
+                } 
                 alt={movie.title} 
                 key={movie.id}/>
             ))

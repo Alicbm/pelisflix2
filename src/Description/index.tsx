@@ -13,25 +13,32 @@ export const Description = () => {
   const dispatch = useAppDispatch()
 
   React.useEffect(() => {
-    const getPosts = async () => { 
+    const getVideo = async () => { 
       const mainUrl = process.env.REACT_APP_MAIN_URL  
       const key = process.env.REACT_APP_KEY  
       
       try {
         const similarMoviesFetch = await fetch(`${mainUrl}/movie/${movieSelected.id}/similar?api_key=${key}`);
+        const elseIf = await fetch(`${mainUrl}/movie/upcoming?api_key=${key}`);
         const videoFetch = await fetch(`${mainUrl}/movie/${movieSelected.id}/videos?api_key=${key}`);
         
         const dataSimilarMovies = await similarMoviesFetch.json();
+        const dataElseIf = await elseIf.json()
         const dataVideo = await videoFetch.json();
 
-        dispatch(setSimilarMovies(dataSimilarMovies.results));        
-        dispatch(setVideo(dataVideo.results[1]));        
+        if(!dataSimilarMovies.results[0]){
+          dispatch(setSimilarMovies(dataElseIf.results));        
+        }else {
+          dispatch(setSimilarMovies(dataSimilarMovies.results));        
+        }
+
+        dispatch(setVideo(dataVideo.results[1])); 
 
       } catch (error) {
         console.log(error);
       }
     }
-    getPosts()
+    getVideo()
   }, [movieSelected])
 
   return (

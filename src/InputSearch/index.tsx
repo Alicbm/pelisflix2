@@ -45,6 +45,7 @@ export const InputSearch = () => {
         ".InputSearch-input"
       ) as HTMLInputElement;
       input.value = "";
+      
     } catch (error) {
       console.log(error);
     }

@@ -1,6 +1,7 @@
 import React from "react";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { reviews as setReviews } from "../features/mainSlices";
+import { getSections } from "../functions";
 import { Review } from "../types";
 import user from '../images/user.png'
 import "./Reviews.css";
@@ -10,7 +11,11 @@ export const Reviews = () => {
     (state) => state.mainReducer
   );
   const dispatch = useAppDispatch();
+
   const url_img = process.env.REACT_APP_URL_IMAGE;
+  const mainUrl = process.env.REACT_APP_MAIN_URL;
+  const key = process.env.REACT_APP_KEY;
+
 
   const formatDate = (date: string) => {
     const newDate = new Date(date);
@@ -39,22 +44,11 @@ export const Reviews = () => {
   }
 
   React.useEffect(() => {
-    const getPosts = async () => {
-      const mainUrl = process.env.REACT_APP_MAIN_URL;
-      const key = process.env.REACT_APP_KEY;
-
-      try {
-        const res = await fetch(
-          `${mainUrl}/movie/${movieSelected.id}/reviews?api_key=${key}`
-        );
-        const data = await res.json();          
-
-        dispatch(setReviews(data.results));
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getPosts();
+    getSections(
+      `${mainUrl}/movie/${movieSelected.id}/reviews?api_key=${key}`,
+      dispatch,
+      setReviews
+    );
   }, [movieSelected]);
 
   return (

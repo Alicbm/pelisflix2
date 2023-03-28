@@ -10,41 +10,21 @@ import {
   categories as setCategories,
 } from "../features/mainSlices";
 import { useAppDispatch, useAppSelector } from '../store/hooks'
+import { getSections, getCategoriesGenres } from '../functions';
 import './Home.css'
 
 export const Home = () => {
   const { trending, nowPlaying, topRated, popular } = useAppSelector(state => state.mainReducer)
   const dispatch = useAppDispatch()
+  const mainUrl = process.env.REACT_APP_MAIN_URL  
+  const key = process.env.REACT_APP_KEY  
 
   React.useEffect(() => {
-    const getPosts = async () => { 
-      const mainUrl = process.env.REACT_APP_MAIN_URL  
-      const key = process.env.REACT_APP_KEY  
-      
-      try {
-        const trendingFetch = await fetch(`${mainUrl}/trending/movie/day?api_key=${key}`);
-        const nowPLayingFetch = await fetch(`${mainUrl}/movie/now_playing?api_key=${key}`);
-        const topRatedFetch = await fetch(`${mainUrl}/movie/top_rated?api_key=${key}`);
-        const popularFetch = await fetch(`${mainUrl}/movie/popular?api_key=${key}`);
-        const categoriesFetch = await fetch(`${mainUrl}/genre/movie/list?api_key=${key}`);
-
-        const dataTrending = await trendingFetch.json();
-        const dataNowPlaying = await nowPLayingFetch.json();
-        const dataTopRated = await topRatedFetch.json();
-        const dataPopular = await popularFetch.json();
-        const dataCategories = await categoriesFetch.json();
-    
-        dispatch(setTrending(dataTrending.results));
-        dispatch(setNowPlaying(dataNowPlaying.results));
-        dispatch(setTopRated(dataTopRated.results));
-        dispatch(setPopular(dataPopular.results));
-        dispatch(setCategories(dataCategories.genres));
-
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    getPosts()
+    getSections(`${mainUrl}/trending/movie/day?api_key=${key}`, dispatch, setTrending)
+    getSections(`${mainUrl}/movie/now_playing?api_key=${key}`, dispatch, setNowPlaying)
+    getSections(`${mainUrl}/movie/top_rated?api_key=${key}`, dispatch, setTopRated)
+    getSections(`${mainUrl}/movie/popular?api_key=${key}`, dispatch, setPopular)
+    getCategoriesGenres(`${mainUrl}/genre/movie/list?api_key=${key}`, dispatch, setCategories)
   }, [])
   
   return (
