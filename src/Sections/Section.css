@@ -12,11 +12,11 @@
   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url('../images/the-avengers-2.jpg');
   background-position: center;
   background-size: cover;
-  padding: 0 30px 20px 30px;
+  padding-bottom: 20px;
   margin-bottom: 20px;
 }
 .Section-header img{
-  width: 330px;
+  width: 250px;
   margin: 0 auto;
 }
 .Section-header .InputSearch{
@@ -24,6 +24,7 @@
   margin-top: 20px;
 } 
 .Section-container__title{
+  width: 90%;
   min-height: 50px;
   display: grid;
   place-content: center;
@@ -49,9 +50,16 @@
 }
 
 @media(min-width: 700px){
+  .Section-header{
+    padding: 0 30px 20px 30px;
+  }
   .Section-header h1{
     font-size: 3.5rem;
     margin-bottom: 40px;
+  }
+  .Section-header img{
+    width: 330px;
+    margin: 0 auto;
   }
   .Section-container__title{
     font-size: 3.5rem;
@@ -65,6 +73,9 @@
   }
 }
 @media(min-width: 1000px){
+  .Section-container__title{
+    width: 100%;
+  }
   .Section-container__movies img{
     width: 180px;
     height: 270px;
