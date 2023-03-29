@@ -1,46 +1,25 @@
-# Getting Started with Create React App
+# Pelisflix2 :performing_arts:
+> "This is the improved version of pelisflix, where you will know the new and best movies".
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hello Again! 
 
-## Available Scripts
+Welcome to my repository, this time I have the opportunity to present you the improved version of one of my previous projects, **[Pelisflix](alicbm.github.io/pelisflix/ "Pelisflix")**. This app has previous features like the main section with different types of movies where we have options like **Trending**, **Now Playing**, **Top Rated** and **Popular** for the different movies. We have a database with a large number of movies (more than 800,000 movies), we can do this search either by filtering the movies by each category or by typing the name of the movie we want to find in the input search.
 
-In the project directory, you can run:
+On the other hand, in the description path there are news, now we have the option to see the trailer of the film that we look for; but that's not all, there is an option to see the reviews written by other people. Also, the app owns the above options in this path like movie overview, movie release date, popularity, related movies and main cast of the movie.
 
-### `npm start`
+However, the new functionalities are not the main reason why the new version of this app was made, as I reviewed the app some time ago and saw various issues with it. The main problem was the code, there were many functions with the same functionality, the process was not automated and visually the code was horrible. Another reason was the way I passed the data through the different components, useContext is not the best option for this, so I decided to use the redux toolkit for this task.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+> This app uses the [LocalStorage](https://developer.mozilla.org/es/docs/Web/API/Window/localStorage "LocalStorage")  tool, which is useful for data persistence, and in this way we can navigate the page without problems. If you want to know more about this tool you can do click on the prevous link.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Built With :hammer_and_wrench:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- TheMovieDB API 
+- React Js
+- Typescript
+- Redux Toolkit
+- HTML
+- CSS
+- Git
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+*Ceated by Alic Barandica, FullStack Developer.*
