@@ -21,7 +21,7 @@ export const Footer = () => {
           </div>
           <div>
             <a
-              href="https://github.com/Alicbm/e-commerce"
+              href="https://github.com/Alicbm/pelisflix2"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -39,7 +39,7 @@ export const Footer = () => {
           </div>
         </div>
         <a 
-          href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTHVmfWKBjdWLbXsbXxhTtdTDpcZpkRTsXGdPwdCVcpDZGlQQDPJWjQdMQhTDcjDLXLXXV"
+          href="mailto:alicmejia175@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
